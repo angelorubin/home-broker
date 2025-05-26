@@ -34,7 +34,7 @@ export class WalletsService {
   ) {
     return this.walletAssetSchema.create({
       wallet: data.walletId,
-      assetId: data.assetId,
+      asset: data.assetId,
       shares: data.shares
     })
   }

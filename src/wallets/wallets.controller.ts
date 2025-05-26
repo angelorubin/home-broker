@@ -25,7 +25,7 @@ export class WalletsController {
   @Post('/:id/assets')
   createWalletAsset(
     @Param('id') id: string,
-    @Body() body
+    @Body() body: { assetId: string, shares: number }
   ) {
     return this.walletsService.createWalletAsset({
       walletId: id,
